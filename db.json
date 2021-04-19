@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "url": "https://lid.zoocdn.com/u/1024/768/d5dde0c05db0addc44a3a1c4c7d20b0da8c8e760.jpg",
+      "price": "£500,000",
+      "type": "3 bed",
+      "address": "Marylee way, london, SE11",
+      "number_of_bedrooms": 3,
+      "number_of_bathrooms": 2,
+      "sitting": 1
+    }
+  ]
+}
