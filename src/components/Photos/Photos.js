@@ -11,20 +11,59 @@ const Photos = ({ url }) => {
   return (
     <View>
       <View style={[styles.flexRow, styles.iconsOnImageHeader]}>
-          <Icon testID="back-arrow-icon" name="chevron-left" size={30} color="white" />
+          <Icon
+            testID="back-arrow-icon"
+            name="chevron-left"
+            size={30}
+            color="white"
+            accessible={true}
+            accessibilityRole={"icon"}
+            accessibilityLabel={"Navigate back"}
+          />
           <View style={[styles.flexRow]}>
-            <Icon testID="share-icon" name="share-square" size={30} color="white" />
-            <Icon testID="heart-icon" name="heart" size={30} color="white" style={styles.marginLeft20} />
+            <Icon
+              testID="share-icon"
+              name="share-square"
+              size={30}
+              color="white"
+              accessible={true}
+              accessibilityRole={"icon"}
+              accessibilityLabel={"Share image"}
+            />
+            <Icon
+              testID="heart-icon"
+              name="heart"
+              size={30}
+              color="white"
+              style={styles.marginLeft20}
+              accessible={true}
+              accessibilityRole={"icon"}
+              accessibilityLabel={"Like image"}
+            />
           </View>
       </View>
       <View style={[styles.imageFooter]}>
         <View style={[styles.iconsOnImageFooter]}>
           <Text testID="camera-index" h4 style={styles.photoIndex}>{currentIndex + 1}/{url.length}</Text>
-          <Icon testID="camera-icon" style={styles.marginLeft20} name="camera" size={30} color="white" />
+          <Icon 
+            testID="camera-icon"
+            style={styles.marginLeft20}
+            name="camera"
+            size={30}
+            color="white"
+          />
         </View>
       </View>
       {url.map(imageUrl => (
-        <Image testID={imageUrl} key={imageUrl} style={styles.image} source={{uri: imageUrl}}></Image>
+        <Image
+          testID={imageUrl}
+          key={imageUrl}
+          style={styles.image}
+          source={{uri: imageUrl}}
+          accessible={true}
+          accessibilityRole={"image"}
+          accessibilityLabel={"First Image"}
+        ></Image>
       ))}
     </View>
   );

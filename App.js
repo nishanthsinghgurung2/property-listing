@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import axios from 'axios';
 import PropertyDetails from './src/components/PropertyDetails/PropertyDetails';
@@ -35,8 +35,11 @@ export default function App() {
               <FlatList 
                 data={properties}
                 keyExtractor={item => item.id.toString()}
+                accessible={true}
+                accessibilityRole={"list"}
+                accessibilityLabel={"Properties list"}
                 renderItem = {({ item }) => (
-                  <View testID="13">
+                  <View>
                     <PropertyDetails
                       id={item.id}
                       url={item.url}
